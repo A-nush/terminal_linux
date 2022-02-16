@@ -1,0 +1,75 @@
+Посмотреть где я === pwd
+
+Создать папку === mkdir test
+
+Зайти в папку === cd test 
+
+Создать 3 папки === d_1 f_1 s_1
+
+Зайти в любую папку === cd s_1
+
+Создать 5 файлов (3 txt, 2 json) === touch r.txt y.txt t.txt k.json h.json
+
+Создать 3 папки = mkdir b_2 g_2 n_2
+
+Вывести список содержимого папки === ls -la
++ Открыть любой txt файл === vim r.txt
++ написать туда что-нибудь, любой текст === «I» - текст: Начнем все сначала  
++ сохранить и выйти === esc - :wq
+
+Выйти из папки на уровень выше === cd ..
+
+Переместить любые 2 файла, которые вы создали, в любую другую папку === 
+	mv s_1/t.txt s_1/k.json /Users/anushmhayan/Documents/test/d_1
+
+Скопировать любые 2 файла, которые вы создали, в любую другую папку === 
+	cp s_1/h.json s_1/y.txt /Users/anushmhayan/Documents/test/f_1 
+
+Найти файл по имени === documents % find . -name «*r*» (найден ./s_1/r.txt)
+
+Просмотреть содержимое в реальном времени (команда grep) изучите как она работает ===
+	tail -F /Users/anushmhayan/Documents/test/s_1/r.txt
+
+Вывести несколько первых строк из текстового файла === 
+	anushmhayan@MacBook-Air-Anush s_1 % head -5 r.txt
+	
+Вывести несколько последних строк из текстового файла === 
+	anushmhayan@MacBook-Air-Anush s_1 % tail -5 r.txt
+
+Просмотреть содержимое длинного файла (команда less) изучите как она работает === 
+	anushmhayan@MacBook-Air-Anush s_1 % less -N r.txt (с нумерацией)
+	
+Вывести дату и время === anushmhayan@MacBook-Air-Anush s_1 % date
+	Fri Feb 11 14:23:18 +03 2022 
+
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request === 
+anushmhayan@MacBook-Air-Anush ~ % curl "http://162.55.220.72:5005/get_method?name="Anush"&age=40"
+["Anush","40"]
+
+2) Написать скрипт, который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+#!/bin/bash
+cd my_script
+mkdir p_1 p_2 p_3
+cd p_1
+touch q.txt a.txt z.txt x.json c.json
+mkdir h_1 h_2 h_3
+ls -la
+mv q.txt x.json ../p_3
+
+====
+
+Last login: Fri Feb 11 00:38:35 on ttys000
+/Users/anushmhayan/Documents/my_script/script1 ; exit;                          
+anushmhayan@MacBook-Air-Anush ~ % /Users/anushmhayan/Documents/my_script/script1 ; exit;
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+
+[Процесс завершен]
+
+
